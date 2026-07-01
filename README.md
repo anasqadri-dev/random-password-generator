@@ -4,7 +4,7 @@
 
 ## Demo
 
-[▶ Generate an strong password for yourself]()
+[▶ Generate an strong password for yourself](https://anasqadri-dev.github.io/random-password-generator/)
 
 ---
 
