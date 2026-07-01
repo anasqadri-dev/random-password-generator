@@ -4,7 +4,7 @@
 
 ## Demo
 
-[▶ Generate an strong password for yourself](YOUR_LINKEDIN_POST_LINK)
+[▶ Generate an strong password for yourself]()
 
 ---
 
