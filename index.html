@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a <br /><span> Random Password </span></h1>
+      <div class="display">
+        <input type="text" id="password" readonly placeholder="Your Password" />
+        <button
+          class="copy-btn"
+          id="copy"
+          onclick="copyPassword()"
+          aria-label="Copy password"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path
+              d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <button class="generate-btn" id="generate" onclick="generatePassword()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 2H3v16h5v4l6-4h7V2z"></path>
+          <path d="M8 10h8"></path>
+          <path d="M8 14h5"></path>
+        </svg>
+        Generate Password
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

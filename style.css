@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3b2a1c;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    padding: 1.5rem;
+}
+
+.container {
+    max-width: 560px;
+    width: 100%;
+    background: #5c3f2b;
+    padding: 2.5rem 2rem 2.8rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 20px 35px -8px rgba(20, 10, 5, 0.7),
+                inset 0 1px 4px rgba(255, 215, 175, 0.15);
+}
+
+/* heading */
+.container h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #e9d6c0;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+    border-left: 5px solid #c9a77b;
+    padding-left: 1rem;
+}
+
+.container h1 span {
+    color: #f3e1cc;
+    background: linear-gradient(145deg, #b58b6b, #8f6a4b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* display row */
+.display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2f1f13;
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+    border-radius: 60px;
+    margin-bottom: 2rem;
+    border: 1px solid #73543b;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 0 #4f3723;
+}
+
+.display input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.9rem 0;
+    font-size: 1.2rem;
+    font-weight: 450;
+    letter-spacing: 0.02em;
+    color: #f2e0ce;
+    outline: none;
+    min-width: 0;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.display input::placeholder {
+    color: #a68467;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    opacity: 0.7;
+}
+
+/* copy button - now a proper button with SVG */
+.copy-btn {
+    background: #4f3522;
+    border: none;
+    border-radius: 40px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.15s;
+    flex-shrink: 0;
+    color: #eddccb;
+    padding: 0;
+}
+
+.copy-btn:hover {
+    background: #73513a;
+    transform: scale(1.04);
+    box-shadow: 0 0 0 3px #a77b5a55;
+}
+
+.copy-btn:active {
+    transform: scale(0.92);
+}
+
+.copy-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #eddccb;
+}
+
+/* generate button */
+.generate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: #8f6a4b;
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1.25rem;
+    font-weight: 550;
+    color: #f5e8da;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #4d3522, 0 10px 20px -6px #1f140e;
+    transition: all 0.08s linear;
+    border: 1px solid #b58b6a;
+    letter-spacing: 0.3px;
+    width: 100%;
+}
+
+.generate-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #f5e8da;
+    flex-shrink: 0;
+}
+
+.generate-btn:hover {
+    background: #9f7a58;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 0 #4d3522, 0 14px 28px -8px #1f140e;
+}
+
+.generate-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #4d3522;
+}
+
+.generate-btn:focus-visible {
+    outline: 3px solid #dcb48b;
+    outline-offset: 3px;
+}
+
+/* responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.8rem 1.2rem 2rem;
+        border-radius: 2rem;
+    }
+    .container h1 {
+        font-size: 1.8rem;
+        padding-left: 0.75rem;
+    }
+    .display input {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+    .generate-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    .copy-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .copy-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.display input:focus {
+    outline: none;
+}
+
+/* copy feedback animation */
+.copy-btn.copied {
+    background: #6b8c5c;
+    transform: scale(0.95);
+}
+
+.copy-btn.copied svg {
+    stroke: #e8f5e0;
+}
